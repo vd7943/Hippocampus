@@ -1,0 +1,65 @@
+import React from "react";
+
+const Hero = () => {
+  return (
+    <div
+      className="min-h-screen bg-cover bg-center text-[#FFFFFF] flex flex-col justify-between"
+      style={{
+        backgroundImage: "url('/hero-background.png')",
+      }}
+    >
+      <div className="flex items-center justify-between px-6 lg:px-8 py-6">
+        <img
+          src="/logo.png"
+          alt="Hippocampus Infotech Logo"
+          className="h-8 md:h-14"
+        />
+
+        <nav className="hidden md:flex items-center gap-18 text-[#FFFFFF]">
+          <a href="#services" className="hover:underline">
+            SERVICES
+          </a>
+          <a href="#solutions" className="hover:underline">
+            SOLUTIONS
+          </a>
+          <a href="#company" className="hover:underline">
+            COMPANY
+          </a>
+        </nav>
+        <button className="ml-4 cursor-pointer px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90">
+          CONTACT US
+        </button>
+      </div>
+
+      <div className="flex-1 flex flex-col lg:justify-center px-6 md:px-38 max-w-6xl my-10 lg:my-14">
+        <h1 className="text-4xl md:text-6xl font-bold leading-none mb-4">
+          Business <br /> automation <br />
+          <span className="font-light text-5xl">for enterprises</span>
+        </h1>
+
+        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight">
+          At Hippocampus Infotech, we are a technology-driven company committed
+          to delivering secure, scalable, and intelligent digital solutions
+          across various industries. With a strong foundation in identity
+          management, AI/ML integration, and enterprise automation, we empower
+          businesses to digitize operations, enhance compliance, and drive
+          innovation.
+          <br />
+          From banking and finance to healthcare, e-commerce, and government-led
+          digital initiatives, our expertise lies in simplifying complex
+          workflows through customized platforms and cutting-edge technologies.
+          Our team specializes in secure KYC systems, Aadhaar and MOSIP
+          integrations, OCR solutions, eSign platforms, and AI-powered
+          automation, all designed to help businesses operate faster and
+          smarter.
+        </p>
+
+        <button className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90">
+          GET A FREE QUOTE
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
