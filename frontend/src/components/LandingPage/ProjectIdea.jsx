@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectIdea = () => {
   return (
-    <section className="bg-[#01010D] text-white py-12 px-6 md:px-12">
+    <section className="bg-[#01010D] text-white pb-12 lg:pb-0 pt-12 px-6 md:px-12">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="w-32 md:w-100 flex justify-center md:justify-start">
           <img
