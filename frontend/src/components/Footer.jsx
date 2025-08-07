@@ -32,7 +32,7 @@ const location = [
 const Footer = () => {
   return (
     <footer className="bg-[#0D0E0C] text-white rounded-t-2xl px-6 lg:px-20 pt-16">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-30 border-b border-[#2C2C2C] pb-10 px-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-30 border-b border-[#2C2C2C] pb-10 lg:px-8">
         <div>
           <h3 className="text-lg lg:text-2xl font-semibold mb-10">Services</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
@@ -118,7 +118,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="mt-10 flex flex-col lg:flex-row justify-between items-center border-t border-[#2C2C2C] gap-6">
+      <div className="mt-10 pt-10 lg:pt-0 flex flex-col lg:flex-row justify-between items-center border-t border-[#2C2C2C] gap-6">
         <div className="flex gap-4 text-white text-xl lg:text-2xl">
           <FaLinkedinIn className="hover:text-[#0077b5] hover:scale-110 transition-all duration-300 cursor-pointer" />
           <FaTwitter className="hover:text-[#1DA1F2] hover:scale-110 transition-all duration-300 cursor-pointer" />
