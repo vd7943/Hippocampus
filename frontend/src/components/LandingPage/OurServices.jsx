@@ -35,7 +35,7 @@ const services = [
 const OurServices = () => {
   return (
     <section className="relative z-10 bg-[#01010D] pt-16 px-6 lg:px-0">
-      <div className="text-center mb-12">
+      <div id="services" className="text-center mb-12">
         <p className="text-[#FFFFFF] text-sm tracking-widest font-medium">
           DEEP TECH EXPERTISE AND STRONG R&D
         </p>
