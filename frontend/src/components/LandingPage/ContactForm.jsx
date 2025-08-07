@@ -9,7 +9,7 @@ const ContactForm = () => {
       <h2 className="text-3xl md:text-4xl font-medium text-center tracking-wide">
         Have a project idea? Schedule a call with us!
       </h2>
-      <p className="text-center mt-2 text-lg md:text-xl">
+      <p className="text-center mt-2 text-lg md:text-xl tracking-normal">
         Shoot us an email with your request, and we will connect you within one
         business day.
       </p>
@@ -43,7 +43,7 @@ const ContactForm = () => {
         />
         <input
           type="text"
-          placeholder="Linkedin–Telegram *"
+          placeholder="Linkedin-Telegram *"
           className="p-3 rounded-md w-full border border-white bg-transparent text-white placeholder-white/70"
         />
 
