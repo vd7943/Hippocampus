@@ -30,9 +30,12 @@ const Hero = () => {
           </a>
         </nav>
 
-        <button className="hidden md:block cursor-pointer ml-4 px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90">
+        <a
+          href="#contact"
+          className="hidden md:block cursor-pointer ml-4 px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
+        >
           CONTACT US
-        </button>
+        </a>
         <button
           className="md:hidden text-white text-3xl"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,12 +67,13 @@ const Hero = () => {
           >
             COMPANY
           </a>
-          <button
+          <a
+            href="#contact"
             onClick={() => setIsMenuOpen(false)}
             className="px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
           >
             CONTACT US
-          </button>
+          </a>
         </div>
       )}
 
