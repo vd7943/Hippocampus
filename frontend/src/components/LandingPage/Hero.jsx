@@ -79,7 +79,7 @@ const Hero = () => {
           <span className="font-light text-5xl">for enterprises</span>
         </h1>
 
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight">
+        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
           At Hippocampus Infotech, we are a technology-driven company committed
           to delivering secure, scalable, and intelligent digital solutions
           across various industries. With a strong foundation in identity
