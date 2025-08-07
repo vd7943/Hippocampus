@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <div
-      className="text-[#FFFFFF] rounded-3xl px-6 py-10 max-w-7xl mx-10 my-16"
+      className="text-[#FFFFFF] rounded-3xl px-6 py-10 max-w-7xl mx-2 lg:mx-10 my-8 lg:my-16"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
     >
       <h2 className="text-3xl md:text-4xl font-medium text-center tracking-wide">
@@ -14,7 +14,7 @@ const ContactForm = () => {
         business day.
       </p>
 
-      <form className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 pb-4 px-8">
+      <form className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 lg:pt-12 lg:pb-4 lg:px-8">
         <input
           type="text"
           placeholder="Name *"
@@ -48,7 +48,7 @@ const ContactForm = () => {
         />
 
         <div className="md:col-span-3 flex flex-col gap-4">
-          <label className="flex items-start gap-3 text-lg leading-snug tracking-wide text-white">
+          <label className="flex items-start gap-3 text-md lg:text-lg leading-snug tracking-wide text-white">
             <input
               type="checkbox"
               className="w-7 h-7 cursor-pointer border border-white accent-black"
@@ -64,7 +64,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90"
+            className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90 mt-2 lg:mt-0"
           >
             GET A FREE CONSULTION
           </button>
