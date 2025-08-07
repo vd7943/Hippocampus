@@ -3,6 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <div
+      id="contact"
       className="text-[#FFFFFF] rounded-3xl px-6 py-10 max-w-7xl mx-2 lg:mx-10 my-8 lg:my-16"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
     >
