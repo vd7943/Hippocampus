@@ -25,7 +25,10 @@ const IndustriesWeServe = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col items-end mt-30 lg:mt-0 gap-6 lg:gap-0">
+        <div
+          id="solutions"
+          className="flex flex-col items-end mt-30 lg:mt-0 gap-6 lg:gap-0"
+        >
           <div className="flex flex-wrap gap-6">
             {industries.slice(0, 4).map((item, index) => (
               <img
