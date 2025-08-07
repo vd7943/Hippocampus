@@ -60,10 +60,10 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <div
-        className="mt-20 mx-14 py-10 px-4 md:px-10 lg:px-0 rounded-[30px] bg-white shadow-[0_0_30px_0_#262F87,_0_0_0px_0_#5A5D78]
+        className="mt-20 mx-6 lg:mx-14 py-10 px-4 md:px-10 lg:px-0 rounded-[30px] bg-white shadow-[0_0_30px_0_#262F87,_0_0_0px_0_#5A5D78]
  flex flex-wrap justify-center gap-6 md:gap-0"
       >
-        <div className="w-[280px]text-center p-12 border-r-1">
+        <div className="w-[280px]text-center px-12 pb-10 lg:p-12 border-b-1 lg:border-b-0 lg:border-r-1">
           <img
             src="/image-1.png"
             alt="Star Icon"
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="w-[280px] text-center py-12 border-r-1">
+        <div className="w-[280px] text-center py-12 border-b-1 lg:border-b-0 lg:border-r-1">
           <img
             src="/image-2.png"
             alt="Award Software Developer"
@@ -89,7 +89,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="w-[280px] text-center py-12 border-r-1">
+        <div className="w-[280px] text-center py-12 border-b-1 lg:border-b-0 lg:border-r-1">
           <img
             src="/image-3.png"
             alt="Award Blockchain"
