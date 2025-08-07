@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 const Hero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div
       className="min-h-screen bg-cover bg-center text-[#FFFFFF] flex flex-col justify-between"
@@ -8,7 +11,7 @@ const Hero = () => {
         backgroundImage: "url('/hero-background.png')",
       }}
     >
-      <div className="flex items-center justify-between px-6 lg:px-8 py-6">
+      <div className="flex items-center justify-between px-6 lg:px-8 py-6 relative z-20">
         <img
           src="/logo.png"
           alt="Hippocampus Infotech Logo"
@@ -26,10 +29,49 @@ const Hero = () => {
             COMPANY
           </a>
         </nav>
-        <button className="ml-4 cursor-pointer px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90">
+
+        <button className="hidden md:block cursor-pointer ml-4 px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90">
           CONTACT US
         </button>
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <div className="absolute top-20 left-0 right-0 bg-[#12123B] bg-opacity-95 text-white flex flex-col items-center space-y-6 py-6 z-10 md:hidden">
+          <a
+            href="#services"
+            className="text-lg hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            SERVICES
+          </a>
+          <a
+            href="#solutions"
+            className="text-lg hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            SOLUTIONS
+          </a>
+          <a
+            href="#company"
+            className="text-lg hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            COMPANY
+          </a>
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
+          >
+            CONTACT US
+          </button>
+        </div>
+      )}
 
       <div className="flex-1 flex flex-col lg:justify-center px-6 md:px-38 max-w-6xl my-10 lg:my-14">
         <h1 className="text-4xl md:text-6xl font-bold leading-none mb-4">
