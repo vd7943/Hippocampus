@@ -2,8 +2,11 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section id="company" className="py-12 md:py-10 text-[#000000] text-center">
-      <p className="text-sm tracking-wide uppercase font-semibold mb-4">
+    <section
+      id="company"
+      className="py-12 lg:py-0 md:pb-10 text-[#000000] text-center"
+    >
+      <p className="text-[16px] tracking-wide uppercase font-semibold mb-4">
         Our expertise for your business
       </p>
       <h2 className="text-2xl md:text-4xl font-bold mb-12 tracking-wide">
