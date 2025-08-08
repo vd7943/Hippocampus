@@ -35,7 +35,7 @@ const IndustriesWeServe = () => {
                 key={index}
                 src={item.image}
                 alt={item.label}
-                className="w-42 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
@@ -46,7 +46,7 @@ const IndustriesWeServe = () => {
                 key={index + 4}
                 src={item.image}
                 alt={item.label}
-                className="w-42 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
@@ -57,7 +57,7 @@ const IndustriesWeServe = () => {
                 key={index + 7}
                 src={item.image}
                 alt={item.label}
-                className="w-42 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
