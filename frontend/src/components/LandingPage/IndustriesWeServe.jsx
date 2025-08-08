@@ -16,7 +16,7 @@ const IndustriesWeServe = () => {
   return (
     <section className="relative bg-[#01010D] text-white pb-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto relative pt-20 border-t border-[#2C2C2C] text-center lg:text-start">
-        <div className="absolute left-4 top-10 lg:top-auto lg:bottom-[-30px] lg:left-0 z-10 p-4 md:p-8">
+        <div className="absolute left-4 top-10 lg:top-auto lg:bottom-[-30px] lg:left-0 z-10 p-0 md:p-8">
           <p className="uppercase text-sm text-[#FFFFFF] mb-2 tracking-widest font-medium">
             Enhance your industry with us
           </p>
@@ -35,7 +35,7 @@ const IndustriesWeServe = () => {
                 key={index}
                 src={item.image}
                 alt={item.label}
-                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-36 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
@@ -46,7 +46,7 @@ const IndustriesWeServe = () => {
                 key={index + 4}
                 src={item.image}
                 alt={item.label}
-                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-36 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
@@ -57,7 +57,7 @@ const IndustriesWeServe = () => {
                 key={index + 7}
                 src={item.image}
                 alt={item.label}
-                className="w-38 h-28 lg:h-38 lg:w-52 object-contain"
+                className="w-37 h-28 lg:h-38 lg:w-52 object-contain"
               />
             ))}
           </div>
