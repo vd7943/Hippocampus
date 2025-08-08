@@ -5,6 +5,7 @@ import ProjectIdea from "./LandingPage/ProjectIdea";
 import IndustriesWeServe from "./LandingPage/IndustriesWeServe";
 import ContactForm from "./LandingPage/ContactForm";
 import WhyChooseUs from "./LandingPage/WhyChooseUs";
+import TechSection from "./LandingPage/TechSection";
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <OurServices />
       <ProjectIdea />
       <IndustriesWeServe />
+      <TechSection />
       <WhyChooseUs />
       <ContactForm />
     </>
