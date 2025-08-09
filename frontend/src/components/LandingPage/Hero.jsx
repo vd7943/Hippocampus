@@ -100,9 +100,12 @@ const Hero = () => {
           smarter.
         </p>
 
-        <button className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90">
+        <a
+          href="#contact"
+          className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90"
+        >
           GET A FREE QUOTE
-        </button>
+        </a>
       </div>
     </div>
   );
