@@ -99,11 +99,7 @@ const Footer = () => {
           <h3 className="text-lg lg:text-2xl font-semibold mb-10">Company</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
             <li className="hover:underline cursor-pointer">About us</li>
-            <li className="hover:underline cursor-pointer">Careers</li>
             <li className="hover:underline cursor-pointer">How we Work</li>
-            <li className="hover:underline cursor-pointer">Blog</li>
-            <li className="hover:underline cursor-pointer">News</li>
-            <li className="hover:underline cursor-pointer">Partnership</li>
           </ul>
         </div>
       </div>
