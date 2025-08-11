@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../Context/AuthProvider";
+import Logout from "../../Auth/Logout";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [authUser] = useAuth();
 
   return (
     <div
@@ -29,6 +33,16 @@ const Hero = () => {
             COMPANY
           </a>
         </nav>
+        {authUser ? (
+          <Logout />
+        ) : (
+          <Link
+            to="/login"
+            className="hidden md:block cursor-pointer ml-4 px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
+          >
+            Login
+          </Link>
+        )}
 
         <a
           href="#contact"
@@ -67,6 +81,17 @@ const Hero = () => {
           >
             COMPANY
           </a>
+          {authUser ? (
+            <Logout />
+          ) : (
+            <Link
+              to="/login"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
+            >
+              Login
+            </Link>
+          )}
           <a
             href="#contact"
             onClick={() => setIsMenuOpen(false)}
