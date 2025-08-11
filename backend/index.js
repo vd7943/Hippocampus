@@ -57,6 +57,11 @@ app.use(
       mongoUrl: URI,
       ttl: 14 * 24 * 60 * 60,
     }),
+    cookie: {
+      secure: true, 
+      httpOnly: true,
+      sameSite: "None", 
+    },
   })
 );
 app.use(compression());
@@ -66,3 +71,4 @@ app.use("/user", userRoute);
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 });
+
