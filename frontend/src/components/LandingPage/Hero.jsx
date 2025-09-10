@@ -1,12 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthProvider";
 import Logout from "../../Auth/Logout";
+import AddHeroContent from "../AdminPanel/AddHeroContent";
+import EditHeroContent from "../AdminPanel/EditHeroContent";
+import axios from "axios";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [authUser] = useAuth();
+  const [isAddOpen, setIsAddOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [heroContent, setHeroContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const isAdmin = authUser?.role === "Admin";
+
+  const fetchHeroContent = async () => {
+    try {
+      setLoading(true);
+      const res = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/hero/get`
+      );
+      if (res.data) {
+        setHeroContent(res.data);
+      }
+    } catch (error) {
+      console.error("Error fetching hero content:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchHeroContent();
+  }, []);
 
   return (
     <div
@@ -34,7 +63,7 @@ const Hero = () => {
           </a>
         </nav>
         {authUser ? (
-          <Logout />
+          <Logout className="hidden md:block cursor-pointer" />
         ) : (
           <Link
             to="/login"
@@ -81,17 +110,7 @@ const Hero = () => {
           >
             COMPANY
           </a>
-          {authUser ? (
-            <Logout />
-          ) : (
-            <Link
-              to="/login"
-              onClick={() => setIsMenuOpen(false)}
-              className="px-4 py-2 bg-[#D9D9D9] text-[#2D515C] rounded-full text-sm hover:opacity-90"
-            >
-              Login
-            </Link>
-          )}
+
           <a
             href="#contact"
             onClick={() => setIsMenuOpen(false)}
@@ -103,34 +122,75 @@ const Hero = () => {
       )}
 
       <div className="flex-1 flex flex-col lg:justify-center px-6 md:px-38 max-w-6xl my-10 lg:my-14">
-        <h1 className="text-4xl md:text-6xl font-bold leading-none mb-4">
-          Business <br /> automation <br />
-          <span className="font-light text-5xl">for enterprises</span>
-        </h1>
+        {loading ? (
+          <div className="animate-pulse space-y-4 pb-10">
+            <div className="h-10 bg-gray-300 rounded w-3/4"></div>
+            <div className="h-10 bg-gray-300 rounded w-2/4"></div>
 
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
-          At Hippocampus Infotech, we are a technology-driven company committed
-          to delivering secure, scalable, and intelligent digital solutions
-          across various industries. With a strong foundation in identity
-          management, AI/ML integration, and enterprise automation, we empower
-          businesses to digitize operations, enhance compliance, and drive
-          innovation.
-          <br />
-          From banking and finance to healthcare, e-commerce, and government-led
-          digital initiatives, our expertise lies in simplifying complex
-          workflows through customized platforms and cutting-edge technologies.
-          Our team specializes in secure KYC systems, Aadhaar and MOSIP
-          integrations, OCR solutions, eSign platforms, and AI-powered
-          automation, all designed to help businesses operate faster and
-          smarter.
-        </p>
+            <div className="space-y-2">
+              <div className="h-4 bg-gray-300 rounded w-full"></div>
+              <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+              <div className="h-4 bg-gray-300 rounded w-4/6"></div>
+            </div>
+          </div>
+        ) : (
+          heroContent && (
+            <>
+              <h1 className="text-4xl md:text-6xl font-bold leading-none mb-4">
+                {heroContent.title.split("\n").map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </h1>
 
-        <a
-          href="#contact"
-          className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90"
-        >
-          GET A FREE QUOTE
-        </a>
+              <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
+                {heroContent.description1}
+                <br />
+                {heroContent.description2}
+              </p>
+            </>
+          )
+        )}
+
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 space-x-3">
+          <a
+            href="#contact"
+            className="w-fit bg-[#D9D9D9] text-[#12123B] text-md px-6 py-2 rounded-full cursor-pointer hover:opacity-90"
+          >
+            GET A FREE QUOTE
+          </a>
+          {isAdmin && (
+            <>
+              {!heroContent && (
+                <button
+                  onClick={() => setIsAddOpen(true)}
+                  className="w-fit bg-blue-600 cursor-pointer text-white px-4 py-2 rounded-full hover:opacity-90"
+                >
+                  Add Content
+                </button>
+              )}
+              {heroContent && (
+                <button
+                  onClick={() => setIsEditOpen(true)}
+                  className="w-fit cursor-pointer bg-green-600 text-white px-4 py-2 rounded-full hover:opacity-90"
+                >
+                  Edit Content
+                </button>
+              )}
+            </>
+          )}
+        </div>
+        <AddHeroContent
+          isOpen={isAddOpen}
+          onClose={() => setIsAddOpen(false)}
+        />
+        <EditHeroContent
+          isOpen={isEditOpen}
+          onClose={() => setIsEditOpen(false)}
+          onUpdate={fetchHeroContent}
+        />
       </div>
     </div>
   );
