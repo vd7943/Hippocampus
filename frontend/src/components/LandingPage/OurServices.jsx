@@ -3,32 +3,43 @@ import { FiChevronRight } from "react-icons/fi";
 
 const services = [
   {
-    title: "Blockchain",
+    title: "Aadhaar Solutions",
     points: [
-      "Blockchain development",
-      "Defi development",
-      "Dapp development",
-      "Blockchain consulting",
-      "Smart contracts",
+      "Aadhaar AUA / KUA Platform",
+      "Aadhaar ASA / KSA Platform",
+      "Aadhaar Data Vault",
+      "Aadhaar Masking",
+      "Integrated Offline KYC Solution",
+      "Video KYC Solution",
     ],
   },
   {
-    title: "Web 3.0",
-    points: ["NFT development", "NFT launchpads", "DeFi staking plateforms"],
-  },
-  {
-    title: "Metaverse",
+    title: "KYC & Identity Solutions",
     points: [
-      "Metaverse development",
-      "Metaverse NFT marketplace",
-      "Metaverse application",
-      "Metaverse games",
-      "Metaverse real estate",
+      "Automated ID Identification And Data Retrieval (AIIR)",
+      "OVD Validation",
+      "eSign Gateway",
+      "Paperless Customer Onboarding",
     ],
   },
   {
-    title: "Web 2.0",
-    points: ["UI/UX design", "web development"],
+    title: "MOSIP Solutions",
+    points: [
+      "MOSIP KYC & Auth Engine",
+      "MOSIP based eSign Platform",
+      "MOSIP KYC Platform integrated with IRIS embedded handset",
+      "MOSIP Video KYC Solution",
+      "MOSIP IVR KYC Solution",
+      "MOSIP Based Student ID Validation Platform",
+    ],
+  },
+  {
+    title: "Other Software Solutions",
+    points: [
+      "Custom Software Development",
+      "OSigner",
+      "Biometric Wrapper Application",
+    ],
   },
 ];
 
@@ -46,7 +57,7 @@ const OurServices = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
-          <div key={index} className="relative overflow-hidden lg:h-[360px]">
+          <div key={index} className="relative overflow-hidden lg:h-[380px]">
             <img
               src="/services-background.png"
               alt="card bg"
@@ -60,7 +71,7 @@ const OurServices = () => {
               <ul className="text-[#C4C6CC] space-y-4 text-[13px]">
                 {service.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <FiChevronRight className="mt-1" />
+                    <FiChevronRight className="w-3 h-3 flex-shrink-0 mt-1" />
                     <span>{point}</span>
                   </li>
                 ))}
