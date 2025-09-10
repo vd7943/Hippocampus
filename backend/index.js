@@ -10,6 +10,7 @@ import MongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import userRoute from "./route/user.route.js";
+import heroRoute from "./route/hero.route.js";
 
 const app = express();
 config();
@@ -67,8 +68,10 @@ app.use(
 app.use(compression());
 
 app.use("/user", userRoute);
+app.use("/hero", heroRoute);
 
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 });
+
 
