@@ -5,9 +5,14 @@ import LandingPage from "./components/LandingPage";
 import Login from "./Auth/Login";
 import AboutUs from "./components/AboutUs";
 import HowWeWork from "./components/HowWeWork";
+import { useEffect } from "react";
 
 function App() {
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
