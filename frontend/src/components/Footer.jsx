@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  FaLinkedinIn,
-  FaTwitter,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const location = [
@@ -102,7 +98,12 @@ const Footer = () => {
           <div key={loc.title}>
             <h4 className="font-bold text-lg mb-2">{loc.title}</h4>
             <p>{loc.address}</p>
-            <p className="mt-1 underline">contact@amiinofotech.com</p>
+            <a
+              href="mailto:contact@amiinofotech.com"
+              className="mt-1 underline"
+            >
+              contact@amiinofotech.com
+            </a>
           </div>
         ))}
       </div>
@@ -110,7 +111,7 @@ const Footer = () => {
       <div className="mt-10 pt-10 lg:pt-0 flex flex-col lg:flex-row justify-between items-center border-t border-[#2C2C2C] gap-6">
         <div className="flex gap-4 text-white text-xl lg:text-2xl">
           <FaLinkedinIn className="hover:text-[#0077b5] hover:scale-110 transition-all duration-300 cursor-pointer" />
-          <FaTwitter className="hover:text-[#1DA1F2] hover:scale-110 transition-all duration-300 cursor-pointer" />
+          <FaXTwitter className="hover:text-white hover:scale-110 transition-all duration-300 cursor-pointer" />
           <FaInstagram className="hover:text-[#E1306C] hover:scale-110 transition-all duration-300 cursor-pointer" />
           <FaEnvelope className="hover:text-[#ea4335] hover:scale-110 transition-all duration-300 cursor-pointer" />
         </div>
