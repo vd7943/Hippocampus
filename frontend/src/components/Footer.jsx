@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaEnvelope,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const location = [
   {
@@ -36,70 +37,62 @@ const Footer = () => {
         <div>
           <h3 className="text-lg lg:text-2xl font-semibold mb-10">Services</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
-            <li className="hover:underline cursor-pointer">
-              Blockchain development
+            <li className="">Aadhaar AUA / KUA Platform</li>
+            <li className="">Aadhaar ASA / KSA Platform</li>
+            <li className="">Aadhaar Data Vault</li>
+            <li className="">Aadhaar Masking</li>
+            <li className="">Integrated Offline KYC Solution</li>
+            <li className="">Video KYC Solution</li>
+            <li className="">
+              Automated ID Identification And Data Retrieval (AIIR)
             </li>
-            <li className="hover:underline cursor-pointer">NFT development</li>
-            <li className="hover:underline cursor-pointer">
-              Metaverse development
-            </li>
-            <li className="hover:underline cursor-pointer">DeFi development</li>
-            <li className="hover:underline cursor-pointer">Dapp development</li>
-            <li className="hover:underline cursor-pointer">
-              Blockchain consulting
-            </li>
-            <li className="hover:underline cursor-pointer">
-              Blockchain training
-            </li>
-            <li className="hover:underline cursor-pointer">Smart contracts</li>
-            <li className="hover:underline cursor-pointer">Integrations</li>
-            <li className="hover:underline cursor-pointer">NFT launchpads</li>
-            <li className="hover:underline cursor-pointer">
-              DeFi staking platforms
-            </li>
+            <li className="">OVD Validation</li>
+            <li className="">eSign Gateway</li>
+            <li className="">Paperless Customer Onboarding</li>
+            <li className="">Custom Software Development</li>
+            <li className="">OSigner</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg lg:text-2xl font-semibold mb-10">Solutions</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
-            <li className="hover:underline cursor-pointer">NFT</li>
-            <li className="hover:underline cursor-pointer">Supply chain</li>
-            <li className="hover:underline cursor-pointer">IoT</li>
-            <li className="hover:underline cursor-pointer">Healthcare</li>
-            <li className="hover:underline cursor-pointer">Cannabis</li>
-            <li className="hover:underline cursor-pointer">Automotive</li>
-            <li className="hover:underline cursor-pointer">Real estate</li>
-            <li className="hover:underline cursor-pointer">Insurance</li>
-            <li className="hover:underline cursor-pointer">Loyalty programs</li>
-            <li className="hover:underline cursor-pointer">Logistics</li>
+            <li className="">Account Opening</li>
+            <li className="">Account Modifications</li>
+            <li className="">Digilocker Application</li>
+            <li className="">OCR API Solutions</li>
+            <li className="">AI & ML Solutions</li>
+            <li className="">NLP Solutions</li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-lg lg:text-2xl font-semibold mb-10">
-            Technologies
-          </h3>
+          <h3 className="text-lg lg:text-2xl font-semibold mb-10">Resources</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
-            <li className="hover:underline cursor-pointer">Ethereum</li>
-            <li className="hover:underline cursor-pointer">Binance</li>
-            <li className="hover:underline cursor-pointer">Solana</li>
-            <li className="hover:underline cursor-pointer">Tron</li>
-            <li className="hover:underline cursor-pointer">Hyperledger</li>
-            <li className="hover:underline cursor-pointer">Graphene</li>
-            <li className="hover:underline cursor-pointer">Corda</li>
-            <li className="hover:underline cursor-pointer">EOS</li>
-            <li className="hover:underline cursor-pointer">Front-end</li>
-            <li className="hover:underline cursor-pointer">React</li>
-            <li className="hover:underline cursor-pointer">Java</li>
+            <li className="">Hospitals</li>
+            <li className="">Hotels</li>
+            <li className="">Insurance</li>
+            <li className="">Pharma/Healthcare</li>
+            <li className="">Real Estate</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg lg:text-2xl font-semibold mb-10">Company</h3>
           <ul className="space-y-5 text-md text-[#FFFFFF]">
-            <li className="hover:underline cursor-pointer">About us</li>
-            <li className="hover:underline cursor-pointer">How we Work</li>
+            <li>
+              <Link to="/about-us" className="hover:underline cursor-pointer">
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/how-we-work"
+                className="hover:underline cursor-pointer"
+              >
+                How we Work
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
