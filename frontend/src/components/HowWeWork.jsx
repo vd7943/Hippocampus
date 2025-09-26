@@ -153,7 +153,7 @@ const HowWeWork = () => {
           How We Work
         </h1>
 
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
+        <p className="text-base md:text-[19px] font-light mb-8 leading-tight tracking-wider">
           At <strong>Hippocampus Infotech</strong>, our approach combines
           innovation, collaboration, and precision. Every project begins with a
           deep understanding of client requirements, ensuring that solutions are
@@ -161,7 +161,7 @@ const HowWeWork = () => {
           teams work in close alignment with stakeholders to deliver results
           that are not only efficient but also sustainable.
         </p>
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
+        <p className="text-base md:text-[19px] font-light mb-8 leading-tight tracking-wider">
           Our process emphasizes transparency, agility, and quality at every
           stage. We adopt industry best practices, leverage cutting-edge
           technologies, and maintain continuous communication to keep clients
@@ -175,3 +175,4 @@ const HowWeWork = () => {
 };
 
 export default HowWeWork;
+
