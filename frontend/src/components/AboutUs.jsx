@@ -153,7 +153,7 @@ const AboutUs = () => {
           About Us
         </h1>
 
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
+        <p className="text-base md:text-[19px] font-light mb-8 leading-tight tracking-wider">
           Founded in June 2008,{" "}
           <strong>Hippocampus Infotech Private Limited</strong>
           has built a stellar track record as a trusted partner across diverse
@@ -164,7 +164,7 @@ const AboutUs = () => {
           services—demonstrating exceptional technical versatility and
           operational depth.
         </p>
-        <p className="text-base md:text-[19px] font-light max-w-4xl mb-8 leading-tight tracking-wider">
+        <p className="text-base md:text-[19px] font-light mb-8 leading-tight tracking-wider">
           Incorporated under the CIN <em>U72300AP2008PTC059831</em>, Hippocampus
           Infotech is headquartered in Visakhapatnam, Andhra Pradesh. Over the
           years, it has remained an active and compliant organization,
@@ -177,3 +177,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
